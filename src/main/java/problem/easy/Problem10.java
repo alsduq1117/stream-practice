@@ -8,7 +8,6 @@ package problem.easy;
 
 public class Problem10 {
 
-    // 다시 풀어보기
     /**
      * 주어진 Customer 객체 리스트를 나이(age)별로 그룹화하여 Map으로 반환합니다.
      *

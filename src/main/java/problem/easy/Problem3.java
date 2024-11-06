@@ -13,6 +13,6 @@ public class Problem3 {
      */
     public static double sumOfList(List<Double> numbers) {
         return numbers.stream()
-                .reduce(0.0, (a,b) -> a+b);
+                .reduce(0.0, (a,b) -> a + b);
     }
 }
