@@ -1,8 +1,13 @@
 package problem.easy;
 
+import java.util.Arrays;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class Problem19 {
+
+    // 다시 풀어보기
 
     /**
      * 스트림을 사용하여 문자열 배열에서 TreeMap을 생성합니다.
@@ -12,7 +17,12 @@ public class Problem19 {
      * @return 생성된 TreeMap
      */
     public static Map<String, Integer> createTreeMapFromStream(String[] strings) {
-        // 여기에 코드 작성
-        return null;
+        return Arrays.stream(strings)
+                .collect(Collectors.toMap(
+                        string -> string,
+                        string -> string.length(),
+                        (existing, replacement) -> existing,  //만약 동일한 키가 있을 경우, 기존 값을 유지하도록 설정
+                        TreeMap::new
+                ));
     }
 }
