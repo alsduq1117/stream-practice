@@ -1,6 +1,7 @@
 package problem.easy;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Problem23 {
 
@@ -11,7 +12,8 @@ public class Problem23 {
      * @return 각 문자열의 길이 리스트
      */
     public static List<Integer> calculateStringLengths(List<String> strings) {
-        // 여기에 코드 작성
-        return null;
+        return strings.stream()
+                .map(string -> string.length())
+                .collect(Collectors.toList());
     }
 }
