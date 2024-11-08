@@ -1,6 +1,7 @@
 package problem.easy;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Problem21 {
 
@@ -11,7 +12,9 @@ public class Problem21 {
      * @return 변환된 문자열 리스트
      */
     public static List<String> convertToStringList(List<Integer> numbers) {
-        // 여기에 코드 작성
-        return null;
+        return numbers.stream()
+                .map(number -> number.toString())
+                .collect(Collectors.toList());
+
     }
 }
