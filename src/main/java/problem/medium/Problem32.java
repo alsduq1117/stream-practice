@@ -1,6 +1,7 @@
 package problem.medium;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Problem32 {
 
@@ -11,7 +12,9 @@ public class Problem32 {
      * @return 10 이상 20 이하의 숫자들의 제곱으로 이루어진 리스트
      */
     public static List<Integer> filterAndSquareNumbers(List<Integer> numbers) {
-        // 여기에 코드 작성
-        return null;
+        return numbers.stream()
+                .filter(number -> number >= 10 && number <= 20)
+                .map(number -> number * number)
+                .collect(Collectors.toList());
     }
 }
