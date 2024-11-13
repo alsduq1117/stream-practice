@@ -1,6 +1,8 @@
 package problem.medium;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Problem43 {
 
@@ -13,7 +15,10 @@ public class Problem43 {
      * @return 조건을 만족하는 문자열 리스트
      */
     public static List<String> filterStringsByLength(List<String> strings, List<Integer> lengths) {
-        // 여기에 코드 작성
-        return null;
+        return IntStream.range(0, strings.size())
+                .filter(i -> strings.get(i).length() < lengths.get(i))
+                .mapToObj(strings::get) // 필터링된 인덱스를 사용하여 원래 리스트에서 해당 문자열을 가져오는 역할
+                .collect(Collectors.toList());
+
     }
 }
