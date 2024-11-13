@@ -12,7 +12,8 @@ public class Problem45 {
      * @return 선택된 문자열들을 연결한 새로운 문자열
      */
     public static String concatenateStringsOverLengthThree(List<String> strings) {
-        // 여기에 코드 작성
-        return null;
+        return strings.stream()
+                .filter(string -> string.length() >= 4)
+                .reduce("", (a, b) -> a.concat(b));
     }
 }
