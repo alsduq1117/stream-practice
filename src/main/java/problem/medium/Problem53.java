@@ -1,9 +1,10 @@
 package problem.medium;
 
+import problem.medium.resources.Customer2;
+import problem.medium.resources.Order;
+
 import java.util.List;
 import java.util.stream.Collectors;
-
-import problem.medium.resources.Customer2;
 
 public class Problem53 {
 
@@ -14,6 +15,16 @@ public class Problem53 {
      * @return 각 고객별 'Milk' 제품의 총 주문 수량을 나타내는 리스트
      */
     public static List<String> getTotalMilkOrdersForEachCustomer(List<Customer2> customers) {
-        customers-
+        return customers.stream()
+                .map(customer -> {
+                    // 'Milk' 제품의 총 수량 계산
+                    int totalMilkQuantity = customer.getOrders().stream()
+                            .filter(order -> order.getProduct().equalsIgnoreCase("Milk")) // 대소문자 구분 없이 'Milk' 필터링
+                            .mapToInt(Order::getQuantity) // 수량을 int로 변환
+                            .sum(); // 총합 계산
+                    // 고객 이름과 총 수량을 문자열로 반환
+                    return customer.getName() + ": " + totalMilkQuantity;
+                })
+                .collect(Collectors.toList()); // 결과를 리스트로 수집
     }
 }
