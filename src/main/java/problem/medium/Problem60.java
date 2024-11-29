@@ -1,9 +1,11 @@
 package problem.medium;
 
-import java.util.List;
 import problem.medium.resources.Customer2;
 import problem.medium.resources.Employee;
 import problem.medium.resources.Product;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Problem60 {
 
@@ -17,10 +19,7 @@ public class Problem60 {
      * @param products 제품 리스트 (제품 이름과 가격 정보 포함)
      * @return 'IT' 부서 직원들이 주문한 'Electronics' 제품의 총 가격
      */
-    public static double calculateTotalPriceOfElectronicsOrderedByITEmployees(List<Customer2> customers,
-                                                                              List<Employee> employees,
-                                                                              List<Product> products) {
-        // 여기에 코드 작성
-        return 0.0;
+    public static double calculateTotalPriceOfElectronicsOrderedByITEmployees(List<Customer2> customers, List<Employee> employees, List<Product> products) {
+        return 0;
     }
 }
