@@ -12,10 +12,10 @@ public class Problem31 {
      * @param strings 원본 문자열 리스트
      * @return 조건을 만족하는 대문자로 변환된, 정렬된 문자열 리스트
      */
-//    public static List<String> transformAndSortStrings(List<String> strings) {
-//        return strings.stream()
-//                .filter(string -> 7 > string.length() && 3 < string.length() && string.contains("e"))
-//                .map(string -> string.toUpperCase())
-//                .collect(Collectors.toList());
-//    }
+    public static List<String> transformAndSortStrings(List<String> strings) {
+        return strings.stream()
+                .filter(string -> 7 > string.length() && 3 < string.length() && string.contains("e"))
+                .map(string -> string.toUpperCase())
+                .collect(Collectors.toList());
+    }
 }
