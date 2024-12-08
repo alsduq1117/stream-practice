@@ -14,7 +14,6 @@ public class Problem61 {
      * @return 'key=value' 패턴의 문자열을 key와 정수 value로 변환한 Map
      */
     public static Map<String, Integer> extractKeyValuePairs(List<String> strings) {
-        // 여기에 코드 작성
-        return null;
+        strings.stream()
     }
 }
