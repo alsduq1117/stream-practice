@@ -11,7 +11,6 @@ public class Problem5 {
      * @return 연결된 문자열
      */
     public static String concatenateStrings(List<String> strings) {
-        return strings.stream()
-                .reduce("", (a, b) -> a.concat(b));
+        return null;
     }
 }

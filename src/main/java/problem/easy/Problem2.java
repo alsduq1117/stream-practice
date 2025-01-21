@@ -12,8 +12,6 @@ public class Problem2 {
      * @return 각 요소를 제곱한 새 리스트
      */
     public static List<Integer> squareNumbers(List<Integer> numbers) {
-        return numbers.stream()
-                .map(number -> number * number)
-                .collect(Collectors.toList());
+        return null;
     }
 }

@@ -13,9 +13,7 @@ public class Problem4 {
      * @return 리스트의 최대값
      */
     public static OptionalInt findMax(List<Integer> numbers) {
-        return numbers.stream()
-                .mapToInt(number -> number)
-                .max();
+        return null;
     }
 
     //numbers.stream()은 Stream<Integer>를 반환합니다. max() 메서드는 IntStream, LongStream, 또는 DoubleStream에서만 사용할 수 있습니다.

@@ -12,7 +12,6 @@ public class Problem3 {
      * @return 요소들의 합계
      */
     public static double sumOfList(List<Double> numbers) {
-        return numbers.stream()
-                .reduce(0.0, (a,b) -> a + b);
+        return null;
     }
 }
